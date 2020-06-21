@@ -46,11 +46,13 @@ try {
                {
                     $matchScoreResult = $TennisResultService->GetMatchScore($_GET["mid"], $matchResults);
                     $htmlOutputService->GetMatchScoreOutput($matchScoreResult); 
+               break;
                }
             case "q2"://All
                {
                     $queryGamesForPlayerResult =  $TennisResultService->QueryGamesForPlayer($_GET["playerName"], $matchResults);
                     $htmlOutputService->GetGamesForPlayerResultOutput($queryGamesForPlayerResult);
+               break;
                }
             default:
                 {
