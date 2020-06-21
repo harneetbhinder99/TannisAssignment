@@ -26,7 +26,7 @@ once setup is done then run following command to Execute Unit Tests
   Works as Data Transfer object between Services
 
 ### Model
-    Works as Entities
+  Works as Entities
     
 ### Services
   Bussiness logic / Common logic  
