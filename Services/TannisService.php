@@ -1,6 +1,6 @@
 <?php
 
-include_once("Data/MatchResult.php");
+include_once("Model/MatchResult.php");
 
 include_once("Model/MatchInformation.php");
 include_once("Model/Player.php");
