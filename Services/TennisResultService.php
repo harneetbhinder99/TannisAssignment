@@ -2,7 +2,7 @@
 include_once("DTO/QueryGamesForPlayerResult.php");
 include_once("DTO/MatchScoreResult.php");
 
-class TannisResultService
+class TennisResultService
 {
 
     public function GetMatchScore($matchId, $matches){

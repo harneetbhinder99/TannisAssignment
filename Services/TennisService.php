@@ -8,7 +8,7 @@ include_once("Model/Player.php");
 include_once("Services/FileReaderService.php");
 include_once("Services/LineProcessorService.php");
 
-class TannisService
+class TennisService
 {
 
     public function UpdateScore($currentMatchResult, $matchInformation){

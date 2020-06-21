@@ -1,5 +1,5 @@
 <?php
-require_once("Services\TannisService.php");
+require_once("Services\TennisService.php");
 require_once("UnitTest\DataBuilder\MatchInformationBuilder.php");
 use PHPUnit\Framework\TestCase;
 

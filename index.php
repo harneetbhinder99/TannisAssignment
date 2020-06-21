@@ -1,7 +1,7 @@
 <?php
 
-include_once("Services/TannisService.php");
-include_once("Services/TannisResultService.php");
+include_once("Services/TennisService.php");
+include_once("Services/TennisResultService.php");
 include_once("Services/HtmlOutputService.php");
 include_once("DTO/QueryGamesForPlayerResult.php");
 
@@ -21,21 +21,21 @@ try {
      }
 
     
-    $tannisService= new TannisService();
-    $tannisResultService= new TannisResultService();
+    $TennisService= new TennisService();
+    $TennisResultService= new TennisResultService();
     $htmlOutputService= new HtmlOutputService();
 
-    $matchResults =  $tannisService->PrepareMatchResult();
+    $matchResults =  $TennisService->PrepareMatchResult();
 
     switch (strtolower($type)) 
         {
             case "all"://All
                 {
                 
-                $matchScoreResult = $tannisResultService->GetMatchScore($_GET["mid"], $matchResults); 
+                $matchScoreResult = $TennisResultService->GetMatchScore($_GET["mid"], $matchResults); 
                 $htmlOutputService->GetMatchScoreOutput($matchScoreResult);
 
-                $queryGamesForPlayerResult =  $tannisResultService->QueryGamesForPlayer($_GET["playerName"], $matchResults);
+                $queryGamesForPlayerResult =  $TennisResultService->QueryGamesForPlayer($_GET["playerName"], $matchResults);
                 $htmlOutputService->GetGamesForPlayerResultOutput($queryGamesForPlayerResult);
 
                 break;
@@ -44,12 +44,12 @@ try {
 
             case "q1"://All
                {
-                    $matchScoreResult = $tannisResultService->GetMatchScore($_GET["mid"], $matchResults);
+                    $matchScoreResult = $TennisResultService->GetMatchScore($_GET["mid"], $matchResults);
                     $htmlOutputService->GetMatchScoreOutput($matchScoreResult); 
                }
             case "q2"://All
                {
-                    $queryGamesForPlayerResult =  $tannisResultService->QueryGamesForPlayer($_GET["playerName"], $matchResults);
+                    $queryGamesForPlayerResult =  $TennisResultService->QueryGamesForPlayer($_GET["playerName"], $matchResults);
                     $htmlOutputService->GetGamesForPlayerResultOutput($queryGamesForPlayerResult);
                }
             default:

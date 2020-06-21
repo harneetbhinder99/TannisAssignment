@@ -1,9 +1,9 @@
 <?php
-require_once("Services\TannisService.php");
+require_once("Services\TennisService.php");
 require_once("UnitTest\DataBuilder\MatchInformationBuilder.php");
 use PHPUnit\Framework\TestCase;
 
-class TannisResultServiceTest extends TestCase
+class TennisResultServiceTest extends TestCase
 {
 
     public function test_UpdateScore_Should_Update_PlayerAScore_When_Zero_Passed()
@@ -11,7 +11,7 @@ class TannisResultServiceTest extends TestCase
         // Arrange
             $matchInformationBuilder = new MatchInformationBuilder();
             $matchInformationBuilder->WithPlayerScores(1,2);
-            $sut = new TannisService();
+            $sut = new TennisService();
             $matchInformation = $matchInformationBuilder->Build();
 
         // Act
@@ -26,7 +26,7 @@ class TannisResultServiceTest extends TestCase
          // Arrange
             $matchInformationBuilder = new MatchInformationBuilder();
             $matchInformationBuilder->WithPlayerScores(2,2);
-            $sut = new TannisService();
+            $sut = new TennisService();
             $matchInformation = $matchInformationBuilder->Build();
 
         // Act
